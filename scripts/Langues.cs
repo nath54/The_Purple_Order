@@ -13,7 +13,6 @@ public class Langues : Node
 
     public void parcour_node(Node node){
         //
-        GD.Print("pp : ",node.GetPath());
         if(node is Button nb){
             string path = nb.GetPath();
             if( textes.ContainsKey(path) ){

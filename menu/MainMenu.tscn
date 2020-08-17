@@ -103,3 +103,8 @@ text = "quit"
 __meta__ = {
 "_edit_use_anchors_": false
 }
+[connection signal="pressed" from="Buttons/VBoxContainer/Bt_continue" to="." method="_on_Bt_continue_pressed"]
+[connection signal="pressed" from="Buttons/VBoxContainer/Bt_newgame" to="." method="_on_Bt_newgame_pressed"]
+[connection signal="pressed" from="Buttons/VBoxContainer/Bt_load" to="." method="_on_Bt_load_pressed"]
+[connection signal="pressed" from="Buttons/VBoxContainer/Bt_settings" to="." method="_on_Bt_settings_pressed"]
+[connection signal="pressed" from="Buttons/VBoxContainer/Bt_quit" to="." method="_on_Bt_quit_pressed"]

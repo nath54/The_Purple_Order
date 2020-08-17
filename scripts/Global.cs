@@ -21,7 +21,12 @@ public class Global : Node
         langues.act_textes();
     }
 
-    
+    public bool is_mobile(){
+        string on = OS.GetName();
+        List<string> mb = new List<string>(){"Android","iOS"};
+        return mb.Contains(on);
+    }
+
 
 
 }
