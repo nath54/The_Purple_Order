@@ -1,0 +1,6 @@
+/home/nathan/Data/godoto/projects/The_Purple_Order/.mono/temp/bin/Debug/The_Purple_Order.dll
+/home/nathan/Data/godoto/projects/The_Purple_Order/.mono/temp/bin/Debug/The_Purple_Order.pdb
+/home/nathan/Data/godoto/projects/The_Purple_Order/.mono/temp/obj/Debug/The_Purple_Order.csprojAssemblyReference.cache
+/home/nathan/Data/godoto/projects/The_Purple_Order/.mono/temp/obj/Debug/The_Purple_Order.csproj.CoreCompileInputs.cache
+/home/nathan/Data/godoto/projects/The_Purple_Order/.mono/temp/obj/Debug/The_Purple_Order.dll
+/home/nathan/Data/godoto/projects/The_Purple_Order/.mono/temp/obj/Debug/The_Purple_Order.pdb
