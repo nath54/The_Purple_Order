@@ -1,0 +1,103 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://res/MainTheme.tres" type="Theme" id=1]
+[ext_resource path="res://imgs/ui/titre.png" type="Texture" id=2]
+[ext_resource path="res://imgs/icons/blackhood.png" type="Texture" id=3]
+[ext_resource path="res://imgs/icons/redhood.png" type="Texture" id=4]
+
+[node name="MainMenu" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+theme = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="bg" type="Panel" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="titre" type="Sprite" parent="."]
+position = Vector2( 512, 300 )
+texture = ExtResource( 2 )
+
+[node name="blackhood" type="Sprite" parent="."]
+position = Vector2( 639.602, 413.438 )
+scale = Vector2( 2, 2 )
+texture = ExtResource( 3 )
+
+[node name="redhood" type="Sprite" parent="."]
+position = Vector2( 767.053, 391.464 )
+scale = Vector2( 3, 3 )
+texture = ExtResource( 4 )
+
+[node name="Control" type="Control" parent="."]
+anchor_bottom = 1.0
+margin_left = 89.0
+margin_top = 190.0
+margin_right = 405.0
+margin_bottom = -37.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Control"]
+anchor_bottom = 1.0
+margin_right = 284.0
+margin_bottom = -94.0
+custom_constants/separation = 20
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Bt_continue" type="Button" parent="Control/VBoxContainer"]
+margin_right = 284.0
+margin_bottom = 55.0
+rect_min_size = Vector2( 284, 55 )
+text = "continue"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Bt_newgame" type="Button" parent="Control/VBoxContainer"]
+margin_top = 75.0
+margin_right = 284.0
+margin_bottom = 130.0
+rect_min_size = Vector2( 284, 55 )
+text = "new game"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Bt_load" type="Button" parent="Control/VBoxContainer"]
+margin_top = 150.0
+margin_right = 284.0
+margin_bottom = 205.0
+rect_min_size = Vector2( 284, 55 )
+text = "load game"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Bt_settings" type="Button" parent="Control/VBoxContainer"]
+margin_top = 225.0
+margin_right = 284.0
+margin_bottom = 280.0
+rect_min_size = Vector2( 284, 55 )
+text = "settings"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Bt_quit" type="Button" parent="Control/VBoxContainer"]
+margin_top = 300.0
+margin_right = 284.0
+margin_bottom = 355.0
+rect_min_size = Vector2( 284, 55 )
+text = "quit"
+__meta__ = {
+"_edit_use_anchors_": false
+}
