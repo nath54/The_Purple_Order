@@ -21,5 +21,7 @@ public class Global : Node
         langues.act_textes();
     }
 
+    
+
 
 }
