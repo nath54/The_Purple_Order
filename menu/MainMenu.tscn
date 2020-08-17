@@ -1,14 +1,16 @@
-[gd_scene load_steps=5 format=2]
+[gd_scene load_steps=6 format=2]
 
 [ext_resource path="res://res/MainTheme.tres" type="Theme" id=1]
 [ext_resource path="res://imgs/ui/titre.png" type="Texture" id=2]
 [ext_resource path="res://imgs/icons/blackhood.png" type="Texture" id=3]
 [ext_resource path="res://imgs/icons/redhood.png" type="Texture" id=4]
+[ext_resource path="res://scripts/MainMenu.cs" type="Script" id=5]
 
 [node name="MainMenu" type="Control"]
 anchor_right = 1.0
 anchor_bottom = 1.0
 theme = ExtResource( 1 )
+script = ExtResource( 5 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -34,7 +36,7 @@ position = Vector2( 767.053, 391.464 )
 scale = Vector2( 3, 3 )
 texture = ExtResource( 4 )
 
-[node name="Control" type="Control" parent="."]
+[node name="Buttons" type="Control" parent="."]
 anchor_bottom = 1.0
 margin_left = 89.0
 margin_top = 190.0
@@ -44,7 +46,7 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="VBoxContainer" type="VBoxContainer" parent="Control"]
+[node name="VBoxContainer" type="VBoxContainer" parent="Buttons"]
 anchor_bottom = 1.0
 margin_right = 284.0
 margin_bottom = -94.0
@@ -53,7 +55,7 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="Bt_continue" type="Button" parent="Control/VBoxContainer"]
+[node name="Bt_continue" type="Button" parent="Buttons/VBoxContainer"]
 margin_right = 284.0
 margin_bottom = 55.0
 rect_min_size = Vector2( 284, 55 )
@@ -62,7 +64,7 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="Bt_newgame" type="Button" parent="Control/VBoxContainer"]
+[node name="Bt_newgame" type="Button" parent="Buttons/VBoxContainer"]
 margin_top = 75.0
 margin_right = 284.0
 margin_bottom = 130.0
@@ -72,7 +74,7 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="Bt_load" type="Button" parent="Control/VBoxContainer"]
+[node name="Bt_load" type="Button" parent="Buttons/VBoxContainer"]
 margin_top = 150.0
 margin_right = 284.0
 margin_bottom = 205.0
@@ -82,7 +84,7 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="Bt_settings" type="Button" parent="Control/VBoxContainer"]
+[node name="Bt_settings" type="Button" parent="Buttons/VBoxContainer"]
 margin_top = 225.0
 margin_right = 284.0
 margin_bottom = 280.0
@@ -92,7 +94,7 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="Bt_quit" type="Button" parent="Control/VBoxContainer"]
+[node name="Bt_quit" type="Button" parent="Buttons/VBoxContainer"]
 margin_top = 300.0
 margin_right = 284.0
 margin_bottom = 355.0
