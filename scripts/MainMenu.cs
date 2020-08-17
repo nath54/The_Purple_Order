@@ -10,6 +10,11 @@ public class MainMenu : Control
     {
         globale = (Global)GetNode("/root/Global");
         globale.act_lang();
+        //
+        Button bt_continue = (Button)GetNode("Buttons/VBoxContainer/Bt_continue");
+        if(globale.saves.Count==0){
+            bt_continue.Visible=false;
+        }
     }
 
 }
