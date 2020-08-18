@@ -5,6 +5,7 @@ using System;
 public class Global : Node
 {
     public Langues langues;
+    public Equipment equipment;
     public string langactu="fr";
     public List<string> saves= new List<string>();
 
@@ -12,6 +13,7 @@ public class Global : Node
     public override void _Ready()
     {
         langues=(Langues)GetNode("/root/Langues");
+        equipment=(Equipment)GetNode("/root/Equipment");
     }
 
     public void act_lang(){

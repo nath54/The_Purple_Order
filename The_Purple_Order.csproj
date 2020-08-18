@@ -60,6 +60,7 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="res\languages\en.cs" />
     <Compile Include="res\languages\fr.cs" />
+    <Compile Include="scripts\Equipment.cs" />
     <Compile Include="scripts\Global.cs" />
     <Compile Include="scripts\Langues.cs" />
     <Compile Include="scripts\MainMenu.cs" />
