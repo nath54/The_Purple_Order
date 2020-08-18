@@ -51,13 +51,14 @@ public class Player : KinematicBody2D
         //
         globale = (Global)GetNode("/root/Global");
         //
-        //act_equipment();
+        act_equipment();
         //
         set_anim("move_left");
         set_anim_frame(0);
     }
 
     public override void _PhysicsProcess(float delta){
+        is_running=Input.IsActionPressed("run");
         Vector2 velocity=new Vector2(0,0);
         float vit = _walkSpeed;
         if(is_running){ vit=_runSpeed; }
@@ -75,8 +76,52 @@ public class Player : KinematicBody2D
             velocity.x+=vit;
         }
         //
+        //
         MoveAndCollide(velocity);
         //
+        Vector2 fv=velocity;
+        if(Math.Abs(fv.x)>Math.Abs(fv.y) && Math.Abs(fv.x)>0){
+            if(fv.x<0){
+                if(current_animation!="move_left"){
+                    set_anim("move_left");
+                }
+            }
+            else{
+                if(current_animation!="move_right"){
+                    set_anim("move_right");
+                }
+            }
+            play_anim();
+            if(is_running){
+                set_anim_speedscale(1.5F);
+            }
+            else{
+                set_anim_speedscale(1F);
+            }
+        }
+        else if(Math.Abs(fv.y)>=Math.Abs(fv.x) && Math.Abs(fv.y)>0){
+            if(fv.y<0){
+                if(current_animation!="move_up"){
+                    set_anim("move_up");
+                }
+            }
+            else{
+                if(current_animation!="move_down"){
+                    set_anim("move_down");
+                }
+            }
+            play_anim();
+            if(is_running){
+                set_anim_speedscale(1.5F);
+            }
+            else{
+                set_anim_speedscale(1F);
+            }
+        }
+        else{
+            stop_anim();
+            set_anim_frame(0);
+        }
     }
 
 
@@ -85,16 +130,15 @@ public class Player : KinematicBody2D
     }    
 
     public void set_anim(string aname){
+        current_animation=aname;
         foreach(string san in equipment_act.Values){
             animatedSprite=(AnimatedSprite)GetNode(san);
             if(animatedSprite!=null && animatedSprite.Frames!=null){
-                
-                    animatedSprite.Animation=aname;
-                
+                animatedSprite.Animation=aname;
             }            
         }
     }
-    public void play_anim(string aname){
+    public void play_anim(){
         foreach(string san in equipment_act.Values){
             animatedSprite=(AnimatedSprite)GetNode(san);
             if(animatedSprite!=null && animatedSprite.Frames!=null){
@@ -102,7 +146,7 @@ public class Player : KinematicBody2D
             }            
         }
     }
-    public void stop_anim(string aname){
+    public void stop_anim(){
         foreach(string san in equipment_act.Values){
             animatedSprite=(AnimatedSprite)GetNode(san);
             if(animatedSprite!=null && animatedSprite.Frames!=null){
@@ -118,7 +162,7 @@ public class Player : KinematicBody2D
             }            
         }
     }
-    public void set_anim_speedscale(int speedscale){
+    public void set_anim_speedscale(float speedscale){
         foreach(string san in equipment_act.Values){
             animatedSprite=(AnimatedSprite)GetNode(san);
             if(animatedSprite!=null && animatedSprite.Frames!=null){                
