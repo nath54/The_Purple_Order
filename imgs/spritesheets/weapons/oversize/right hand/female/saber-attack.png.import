@@ -1,0 +1,34 @@
+[remap]
+
+importer="texture"
+type="StreamTexture"
+path="res://.import/saber-attack.png-7613db9daec4799f8e8f5fb2a2d421dc.stex"
+metadata={
+"vram_texture": false
+}
+
+[deps]
+
+source_file="res://imgs/spritesheets/weapons/oversize/right hand/female/saber-attack.png"
+dest_files=[ "res://.import/saber-attack.png-7613db9daec4799f8e8f5fb2a2d421dc.stex" ]
+
+[params]
+
+compress/mode=0
+compress/lossy_quality=0.7
+compress/hdr_mode=0
+compress/bptc_ldr=0
+compress/normal_map=0
+flags/repeat=0
+flags/filter=true
+flags/mipmaps=false
+flags/anisotropic=false
+flags/srgb=2
+process/fix_alpha_border=true
+process/premult_alpha=false
+process/HDR_as_SRGB=false
+process/invert_color=false
+stream=false
+size_limit=0
+detect_3d=true
+svg/scale=1.0
