@@ -1,0 +1,19 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://imgs/tiles/terrain_atlas.png" type="Texture" id=1]
+
+[sub_resource type="AtlasTexture" id=1]
+flags = 4
+atlas = ExtResource( 1 )
+region = Rect2( 928, 900, 96, 120 )
+
+[node name="Tree1" type="RigidBody2D"]
+mode = 1
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
+position = Vector2( 0, -41 )
+polygon = PoolVector2Array( 11.4159, 11.6998, 25.1889, 42.4242, 19.8916, 52.4891, -1.82738, 58.8459, -17.1896, 51.4297, -24.0761, 46.1323, -18.7788, 38.1864, -14.0112, 32.8891, -10.3031, 13.289, -12.422, -2.07323, 5.58887, -2.60295 )
+
+[node name="Sprite" type="Sprite" parent="."]
+position = Vector2( 0, -41 )
+texture = SubResource( 1 )

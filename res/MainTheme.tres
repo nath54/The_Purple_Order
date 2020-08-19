@@ -1,4 +1,4 @@
-[gd_resource type="Theme" load_steps=14 format=2]
+[gd_resource type="Theme" load_steps=21 format=2]
 
 [ext_resource path="res://res/Font.tres" type="DynamicFont" id=1]
 [ext_resource path="res://imgs/ui/bt_disabled.png" type="Texture" id=2]
@@ -7,6 +7,8 @@
 [ext_resource path="res://imgs/ui/bt_normal_hover.png" type="Texture" id=5]
 [ext_resource path="res://imgs/ui/bg.png" type="Texture" id=6]
 [ext_resource path="res://fonts/f1.ttf" type="DynamicFontData" id=7]
+[ext_resource path="res://imgs/ui/Hscroll_bar.png" type="Texture" id=8]
+[ext_resource path="res://imgs/ui/scrollbar_bar.png" type="Texture" id=9]
 
 [sub_resource type="DynamicFont" id=1]
 size = 32
@@ -31,6 +33,46 @@ texture = ExtResource( 3 )
 region_rect = Rect2( 0, 0, 284, 55 )
 
 [sub_resource type="StyleBoxTexture" id=6]
+texture = ExtResource( 9 )
+region_rect = Rect2( 0, 0, 19, 37 )
+margin_left = 5.0
+margin_right = 5.0
+margin_top = 5.0
+margin_bottom = 5.0
+expand_margin_top = 5.0
+expand_margin_bottom = 5.0
+
+[sub_resource type="StyleBoxTexture" id=7]
+texture = ExtResource( 9 )
+region_rect = Rect2( 0, 0, 19, 37 )
+margin_left = 6.0
+margin_right = 6.0
+margin_top = 6.0
+margin_bottom = 6.0
+expand_margin_top = 4.0
+expand_margin_bottom = 4.0
+
+[sub_resource type="StyleBoxTexture" id=8]
+texture = ExtResource( 9 )
+region_rect = Rect2( 0, 0, 19, 37 )
+margin_left = 8.0
+margin_right = 8.0
+margin_top = 8.0
+margin_bottom = 8.0
+expand_margin_top = 3.0
+expand_margin_bottom = 3.0
+
+[sub_resource type="StyleBoxTexture" id=9]
+texture = ExtResource( 8 )
+region_rect = Rect2( 0, 0, 203, 12 )
+
+[sub_resource type="DynamicFont" id=10]
+size = 35
+outline_size = 2
+outline_color = Color( 0, 0, 0, 1 )
+font_data = ExtResource( 7 )
+
+[sub_resource type="StyleBoxTexture" id=11]
 texture = ExtResource( 6 )
 region_rect = Rect2( 0, 0, 1024, 666 )
 
@@ -158,10 +200,10 @@ HScrollBar/icons/decrement = null
 HScrollBar/icons/decrement_highlight = null
 HScrollBar/icons/increment = null
 HScrollBar/icons/increment_highlight = null
-HScrollBar/styles/grabber = null
-HScrollBar/styles/grabber_highlight = null
-HScrollBar/styles/grabber_pressed = null
-HScrollBar/styles/scroll = null
+HScrollBar/styles/grabber = SubResource( 6 )
+HScrollBar/styles/grabber_highlight = SubResource( 7 )
+HScrollBar/styles/grabber_pressed = SubResource( 8 )
+HScrollBar/styles/scroll = SubResource( 9 )
 HScrollBar/styles/scroll_focus = null
 HSeparator/constants/separation = 4
 HSeparator/styles/separator = null
@@ -191,14 +233,14 @@ ItemList/styles/cursor = null
 ItemList/styles/cursor_unfocused = null
 ItemList/styles/selected = null
 ItemList/styles/selected_focus = null
-Label/colors/font_color = Color( 0, 0, 0, 1 )
+Label/colors/font_color = Color( 0.890196, 0.796078, 0.780392, 1 )
 Label/colors/font_color_shadow = Color( 0, 0, 0, 1 )
 Label/colors/font_outline_modulate = Color( 0, 0, 0, 1 )
 Label/constants/line_spacing = 3
 Label/constants/shadow_as_outline = 0
 Label/constants/shadow_offset_x = 1
 Label/constants/shadow_offset_y = 1
-Label/fonts/font = null
+Label/fonts/font = SubResource( 10 )
 Label/styles/normal = null
 LineEdit/colors/clear_button_color = Color( 0, 0, 0, 1 )
 LineEdit/colors/clear_button_color_pressed = Color( 0, 0, 0, 1 )
@@ -247,7 +289,7 @@ OptionButton/styles/focus = null
 OptionButton/styles/hover = null
 OptionButton/styles/normal = null
 OptionButton/styles/pressed = null
-Panel/styles/panel = SubResource( 6 )
+Panel/styles/panel = SubResource( 11 )
 PanelContainer/styles/panel = null
 PopupDialog/styles/panel = null
 PopupMenu/colors/font_color = Color( 0, 0, 0, 1 )

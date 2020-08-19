@@ -1,0 +1,46 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://player/spritesheets/body/male/man-white.tres" type="SpriteFrames" id=1]
+[ext_resource path="res://player/spritesheets/torso/leather/chest_male.tres" type="SpriteFrames" id=2]
+[ext_resource path="res://player/spritesheets/legs/pants/male/male_pants_brown.tres" type="SpriteFrames" id=3]
+[ext_resource path="res://player/spritesheets/feet/shoes/male/brown_shoes_male.tres" type="SpriteFrames" id=4]
+
+[node name="Sprites" type="Node2D"]
+scale = Vector2( 0.75, 0.75 )
+
+[node name="behind_body" type="AnimatedSprite" parent="."]
+
+[node name="belt" type="AnimatedSprite" parent="."]
+
+[node name="body" type="AnimatedSprite" parent="."]
+frames = ExtResource( 1 )
+animation = "move_right"
+
+[node name="arm" type="AnimatedSprite" parent="."]
+
+[node name="hair" type="AnimatedSprite" parent="."]
+
+[node name="hand" type="AnimatedSprite" parent="."]
+
+[node name="head" type="AnimatedSprite" parent="."]
+
+[node name="leg" type="AnimatedSprite" parent="."]
+frames = ExtResource( 3 )
+animation = "move_right"
+
+[node name="feet" type="AnimatedSprite" parent="."]
+scale = Vector2( 1, 1 )
+frames = ExtResource( 4 )
+animation = "move_right"
+
+[node name="torso" type="AnimatedSprite" parent="."]
+frames = ExtResource( 2 )
+animation = "move_right"
+
+[node name="shoulder" type="AnimatedSprite" parent="."]
+
+[node name="facial" type="AnimatedSprite" parent="."]
+
+[node name="accessory" type="AnimatedSprite" parent="."]
+
+[node name="weapon" type="AnimatedSprite" parent="."]

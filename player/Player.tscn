@@ -1,85 +1,35 @@
-[gd_scene load_steps=15 format=2]
+[gd_scene load_steps=5 format=2]
 
-[ext_resource path="res://player/spritesheets/body/zombie.tres" type="SpriteFrames" id=1]
+[ext_resource path="res://player/Sprites_player.tscn" type="PackedScene" id=1]
 [ext_resource path="res://scripts/Player.cs" type="Script" id=2]
-[ext_resource path="res://player/spritesheets/shoulders/male/8.tres" type="SpriteFrames" id=3]
-[ext_resource path="res://player/spritesheets/legs/armor/male/9.tres" type="SpriteFrames" id=4]
-[ext_resource path="res://player/spritesheets/torso/leather/chest_male.tres" type="SpriteFrames" id=5]
-[ext_resource path="res://player/spritesheets/arms/male/2.tres" type="SpriteFrames" id=6]
-[ext_resource path="res://player/spritesheets/feet/armor/male/5.tres" type="SpriteFrames" id=7]
-[ext_resource path="res://player/spritesheets/accessories/neck/scarf/Scarf_black.tres" type="SpriteFrames" id=8]
-[ext_resource path="res://player/spritesheets/weapons/right hand/male/axe.tres" type="SpriteFrames" id=9]
-[ext_resource path="res://player/spritesheets/head/bandanas/male/red.tres" type="SpriteFrames" id=10]
-[ext_resource path="res://player/spritesheets/hair/male/ponytail2.tres" type="SpriteFrames" id=11]
-[ext_resource path="res://player/spritesheets/hands/gloves/male/2.tres" type="SpriteFrames" id=12]
-[ext_resource path="res://player/spritesheets/facial/male/beard/gray2.tres" type="SpriteFrames" id=13]
+[ext_resource path="res://controls/joystick.tscn" type="PackedScene" id=14]
 
 [sub_resource type="CapsuleShape2D" id=1]
-radius = 18.8853
+radius = 11.0902
 height = 0.0
 
 [node name="Player" type="KinematicBody2D"]
 script = ExtResource( 2 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2( 0, 18 )
 scale = Vector2( 0.75, 0.75 )
 shape = SubResource( 1 )
 
-[node name="Sprites" type="Node2D" parent="."]
-
-[node name="behind_body" type="AnimatedSprite" parent="Sprites"]
-
-[node name="belt" type="AnimatedSprite" parent="Sprites"]
-
-[node name="body" type="AnimatedSprite" parent="Sprites"]
-frames = ExtResource( 1 )
-animation = "move_right"
-
-[node name="arm" type="AnimatedSprite" parent="Sprites"]
-frames = ExtResource( 6 )
-animation = "move_right"
-
-[node name="feet" type="AnimatedSprite" parent="Sprites"]
-frames = ExtResource( 7 )
-animation = "move_right"
-
-[node name="hair" type="AnimatedSprite" parent="Sprites"]
-frames = ExtResource( 11 )
-animation = "move_right"
-
-[node name="hand" type="AnimatedSprite" parent="Sprites"]
-frames = ExtResource( 12 )
-animation = "move_right"
-
-[node name="head" type="AnimatedSprite" parent="Sprites"]
-frames = ExtResource( 10 )
-animation = "magic_right"
-
-[node name="leg" type="AnimatedSprite" parent="Sprites"]
-frames = ExtResource( 4 )
-animation = "move_right"
-
-[node name="torso" type="AnimatedSprite" parent="Sprites"]
-frames = ExtResource( 5 )
-animation = "move_right"
-
-[node name="shoulder" type="AnimatedSprite" parent="Sprites"]
-frames = ExtResource( 3 )
-animation = "move_right"
-
-[node name="facial" type="AnimatedSprite" parent="Sprites"]
-frames = ExtResource( 13 )
-animation = "move_right"
-
-[node name="accessory" type="AnimatedSprite" parent="Sprites"]
-frames = ExtResource( 8 )
-animation = "move_right"
-
-[node name="weapon" type="AnimatedSprite" parent="Sprites"]
-frames = ExtResource( 9 )
-animation = "move_right"
-
 [node name="Camera2D" type="Camera2D" parent="."]
 current = true
-zoom = Vector2( 0.75, 0.75 )
+zoom = Vector2( 0.65, 0.65 )
+
+[node name="Sprites" parent="." instance=ExtResource( 1 )]
+position = Vector2( 0, -17 )
+
+[node name="MobileControls" type="Control" parent="."]
+visible = false
+anchor_right = 1.0
+anchor_bottom = 1.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="joystick" parent="MobileControls" instance=ExtResource( 14 )]
+position = Vector2( -221.524, 93.9104 )
+scale = Vector2( 0.5, 0.5 )

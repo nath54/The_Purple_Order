@@ -64,7 +64,9 @@
     <Compile Include="scripts\Global.cs" />
     <Compile Include="scripts\Langues.cs" />
     <Compile Include="scripts\MainMenu.cs" />
+    <Compile Include="scripts\PersoCreation.cs" />
     <Compile Include="scripts\Player.cs" />
+    <Compile Include="scripts\Joystick_Button.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
 </Project>

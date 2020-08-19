@@ -40,6 +40,9 @@ public class Player : KinematicBody2D
     };
 
     //POUR MOBILE
+    public Control MobileControls;
+    public Joystick_Button joystick;
+	public Sprite global_joystick;
     public double[] joystick_val={0.0,0.0};
 
     //AUTRE
@@ -55,6 +58,11 @@ public class Player : KinematicBody2D
         //
         set_anim("move_left");
         set_anim_frame(0);
+        //MOBILE
+        joystick = (Joystick_Button)GetNode("MobileControls/joystick/Joystick_Button");
+		global_joystick = (Sprite)GetNode("MobileControls/joystick");
+        MobileControls = (Control)GetNode("MobileControls");
+
     }
 
     public override void _PhysicsProcess(float delta){
