@@ -28,6 +28,7 @@ public class Player : KinematicBody2D
         {"behind_body","Sprites/behind_body"},
         {"belt","Sprites/belt"},
         {"body","Sprites/body"},
+        {"eye","Sprites/eye"},
         {"facial","Sprites/facial"},
         {"feet","Sprites/feet"},
         {"hair","Sprites/hair"},

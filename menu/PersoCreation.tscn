@@ -1,6 +1,6 @@
-[gd_scene load_steps=19 format=2]
+[gd_scene load_steps=18 format=2]
 
-[ext_resource path="res://imgs/ui/f2.png" type="Texture" id=1]
+[ext_resource path="res://res/Panel_style_colored.tres" type="StyleBox" id=1]
 [ext_resource path="res://player/Player_Viewer.tscn" type="PackedScene" id=2]
 [ext_resource path="res://res/tileset1.tres" type="TileSet" id=3]
 [ext_resource path="res://imgs/ui/bt_normal.png" type="Texture" id=4]
@@ -10,46 +10,38 @@
 [ext_resource path="res://fonts/f1.ttf" type="DynamicFontData" id=8]
 [ext_resource path="res://scripts/PersoCreation.cs" type="Script" id=9]
 
-[sub_resource type="StyleBoxTexture" id=1]
-texture = ExtResource( 1 )
-region_rect = Rect2( 0, 0, 76, 76 )
-margin_left = 5.0
-margin_right = 5.0
-margin_top = 5.0
-margin_bottom = 5.0
+[sub_resource type="DynamicFont" id=2]
+size = 60
+outline_size = 2
+outline_color = Color( 0, 0, 0, 1 )
+font_data = ExtResource( 8 )
 
 [sub_resource type="DynamicFont" id=3]
-size = 60
+size = 50
 outline_size = 2
 outline_color = Color( 0, 0, 0, 1 )
 font_data = ExtResource( 8 )
 
 [sub_resource type="DynamicFont" id=4]
-size = 50
-outline_size = 2
-outline_color = Color( 0, 0, 0, 1 )
-font_data = ExtResource( 8 )
-
-[sub_resource type="DynamicFont" id=5]
 size = 60
 outline_size = 2
 outline_color = Color( 0, 0, 0, 1 )
 font_data = ExtResource( 8 )
 
-[sub_resource type="DynamicFont" id=6]
+[sub_resource type="DynamicFont" id=5]
 size = 50
 outline_size = 2
 outline_color = Color( 0, 0, 0, 1 )
 font_data = ExtResource( 8 )
 
-[sub_resource type="DynamicFont" id=7]
+[sub_resource type="DynamicFont" id=6]
 size = 60
 outline_size = 2
 outline_color = Color( 0, 0, 0, 1 )
 font_data = ExtResource( 8 )
 
 [sub_resource type="DynamicFont" id=10]
-size = 50
+size = 40
 outline_size = 2
 outline_color = Color( 0, 0, 0, 1 )
 font_data = ExtResource( 8 )
@@ -91,10 +83,11 @@ __meta__ = {
 }
 
 [node name="TileMap" type="TileMap" parent="ViewPort"]
-position = Vector2( -12.4603, -194.003 )
+position = Vector2( -12, -194.003 )
 scale = Vector2( 3, 3 )
 tile_set = ExtResource( 3 )
 cell_size = Vector2( 32, 32 )
+cell_custom_transform = Transform2D( 32, 0, 0, 32, 0, 0 )
 format = 1
 tile_data = PoolIntArray( 131072, 4, 131072, 131073, 4, 131073, 131074, 4, 131073, 131075, 4, 131073, 131076, 4, 131074, 196608, 4, 196608, 196609, 1, 1, 196610, 1, 262145, 196611, 1, 2, 196612, 4, 196610, 262144, 4, 196608, 262145, 1, 196610, 262146, 15, 327680, 262147, 1, 196608, 262148, 4, 196610, 327680, 4, 196608, 327681, 1, 65537, 327682, 1, 131073, 327683, 1, 65538, 327684, 4, 196610, 393216, 4, 262144, 393217, 4, 262145, 393218, 4, 262145, 393219, 4, 262145, 393220, 4, 262146 )
 
@@ -127,7 +120,7 @@ margin_left = 542.108
 margin_top = 33.1892
 margin_right = 964.108
 margin_bottom = 552.189
-custom_styles/panel = SubResource( 1 )
+custom_styles/panel = ExtResource( 1 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -151,7 +144,7 @@ margin_top = -4.25203
 margin_right = 332.612
 margin_bottom = 58.748
 rect_scale = Vector2( 0.5, 0.5 )
-custom_fonts/font = SubResource( 3 )
+custom_fonts/font = SubResource( 2 )
 custom_colors/font_color = Color( 0.960784, 0.890196, 0.890196, 1 )
 text = "Gender :"
 __meta__ = {
@@ -168,7 +161,7 @@ margin_top = -21.0
 margin_right = 321.0
 margin_bottom = 59.0
 rect_scale = Vector2( 0.5, 0.5 )
-custom_fonts/font = SubResource( 4 )
+custom_fonts/font = SubResource( 3 )
 custom_colors/font_color = Color( 0.784314, 0.764706, 0.764706, 1 )
 text = "male"
 align = 1
@@ -208,7 +201,7 @@ margin_top = -4.25203
 margin_right = 332.612
 margin_bottom = 58.748
 rect_scale = Vector2( 0.5, 0.5 )
-custom_fonts/font = SubResource( 5 )
+custom_fonts/font = SubResource( 4 )
 custom_colors/font_color = Color( 0.960784, 0.890196, 0.890196, 1 )
 text = "Skin :"
 __meta__ = {
@@ -225,7 +218,7 @@ margin_top = -21.0
 margin_right = 321.0
 margin_bottom = 59.0
 rect_scale = Vector2( 0.5, 0.5 )
-custom_fonts/font = SubResource( 6 )
+custom_fonts/font = SubResource( 5 )
 custom_colors/font_color = Color( 0.784314, 0.764706, 0.764706, 1 )
 text = "white"
 align = 1
@@ -265,7 +258,7 @@ margin_top = -4.25203
 margin_right = 332.612
 margin_bottom = 58.748
 rect_scale = Vector2( 0.5, 0.5 )
-custom_fonts/font = SubResource( 7 )
+custom_fonts/font = SubResource( 6 )
 custom_colors/font_color = Color( 0.960784, 0.890196, 0.890196, 1 )
 text = "Hairs :"
 __meta__ = {
@@ -278,15 +271,16 @@ texture = ExtResource( 4 )
 
 [node name="Label" type="Label" parent="Parameters/C_hairs/bt_normal"]
 margin_left = -108.0
-margin_top = -21.0
+margin_top = -27.0
 margin_right = 321.0
-margin_bottom = 59.0
+margin_bottom = 74.0
 rect_scale = Vector2( 0.5, 0.5 )
 custom_fonts/font = SubResource( 10 )
 custom_colors/font_color = Color( 0.784314, 0.764706, 0.764706, 1 )
-text = "white"
+text = "bangs"
 align = 1
 valign = 1
+autowrap = true
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -303,15 +297,46 @@ margin_top = -22.181
 margin_right = 144.298
 margin_bottom = 17.819
 
+[node name="Bt_cl" type="Button" parent="Parameters/C_hairs"]
+margin_left = 15.0
+margin_top = 88.0
+margin_right = 299.0
+margin_bottom = 144.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ColorRect" type="ColorRect" parent="Parameters/C_hairs/Bt_cl"]
+margin_left = 208.06
+margin_top = 9.0
+margin_right = 246.06
+margin_bottom = 45.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label_cl" type="Label" parent="Parameters/C_hairs/Bt_cl"]
+margin_left = 35.0
+margin_top = 10.0
+margin_right = 409.0
+margin_bottom = 105.0
+rect_scale = Vector2( 0.5, 0.5 )
+custom_fonts/font = SubResource( 6 )
+custom_colors/font_color = Color( 0.960784, 0.890196, 0.890196, 1 )
+text = "Hairs Color :"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
 [node name="C_eyes" type="Control" parent="Parameters"]
 anchor_left = 14.45
 anchor_top = 1.65
 anchor_right = 14.45
 anchor_bottom = 1.65
 margin_left = 8.0
-margin_top = 256.0
+margin_top = 331.0
 margin_right = 344.0
-margin_bottom = 345.0
+margin_bottom = 420.0
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -345,7 +370,7 @@ text = "white"
 align = 1
 valign = 1
 __meta__ = {
-"_edit_use_anchors_": false
+"_edit_use_anchors_": true
 }
 
 [node name="LeftButton" parent="Parameters/C_eyes/bt_normal" instance=ExtResource( 6 )]
@@ -361,14 +386,62 @@ margin_right = 144.298
 margin_bottom = 17.819
 
 [node name="Bt_next" type="Button" parent="Parameters"]
-margin_left = 724.38
-margin_top = 470.145
-margin_right = 899.38
-margin_bottom = 531.145
+margin_left = 803.665
+margin_top = 490.654
+margin_right = 950.665
+margin_bottom = 540.654
 custom_fonts/font = ExtResource( 5 )
 text = "Next"
 __meta__ = {
 "_edit_use_anchors_": false
 }
+
+[node name="ColorPicker" type="Control" parent="Parameters"]
+visible = false
+margin_left = 586.0
+margin_top = 234.0
+margin_right = 626.0
+margin_bottom = 274.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Panel" type="Panel" parent="Parameters/ColorPicker"]
+margin_left = -82.0
+margin_top = -208.0
+margin_right = 413.0
+margin_bottom = 356.0
+custom_styles/panel = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ColorPicker" type="ColorPicker" parent="Parameters/ColorPicker"]
+margin_left = -22.842
+margin_top = -179.281
+margin_right = 407.158
+margin_bottom = 304.719
+edit_alpha = false
+presets_enabled = false
+presets_visible = false
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Bt_ok" type="Button" parent="Parameters/ColorPicker"]
+margin_left = 61.0
+margin_top = 303.0
+margin_right = 240.0
+margin_bottom = 349.0
+text = "ok"
 [connection signal="mouse_entered" from="ViewPort" to="." method="mouse_enter_viewport"]
 [connection signal="mouse_exited" from="ViewPort" to="." method="mouse_exited_viewport"]
+[connection signal="pressed" from="Parameters/C_Gender/bt_normal/LeftButton" to="." method="on_bt_gender_change"]
+[connection signal="pressed" from="Parameters/C_Gender/bt_normal/RightButton" to="." method="on_bt_gender_change"]
+[connection signal="pressed" from="Parameters/C_skin/bt_normal/LeftButton" to="." method="on_bt_body_left"]
+[connection signal="pressed" from="Parameters/C_skin/bt_normal/RightButton" to="." method="on_bt_body_right"]
+[connection signal="pressed" from="Parameters/C_hairs/bt_normal/LeftButton" to="." method="on_bt_hair_left"]
+[connection signal="pressed" from="Parameters/C_hairs/bt_normal/RightButton" to="." method="on_bt_hair_right"]
+[connection signal="pressed" from="Parameters/C_hairs/Bt_cl" to="." method="on_cl_rect_pressed"]
+[connection signal="color_changed" from="Parameters/ColorPicker/ColorPicker" to="." method="on_cl_pick_change"]
+[connection signal="pressed" from="Parameters/ColorPicker/Bt_ok" to="." method="on_cl_pick_press"]
