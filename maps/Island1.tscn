@@ -80,4 +80,4 @@ position = Vector2( 815.587, -128.478 )
 position = Vector2( 815.253, -103.784 )
 
 [node name="Player" parent="YSort" instance=ExtResource( 2 )]
-position = Vector2( 801.859, 229.103 )
+position = Vector2( 919.859, -448.897 )

@@ -66,7 +66,7 @@ expand_margin_bottom = 3.0
 texture = ExtResource( 8 )
 region_rect = Rect2( 0, 0, 203, 12 )
 
-[sub_resource type="StyleBoxTexture" id=13]
+[sub_resource type="StyleBoxTexture" id=10]
 texture = ExtResource( 9 )
 region_rect = Rect2( 0, 0, 19, 37 )
 margin_left = 5.0
@@ -74,7 +74,7 @@ margin_right = 5.0
 margin_top = 5.0
 margin_bottom = 5.0
 
-[sub_resource type="StyleBoxTexture" id=14]
+[sub_resource type="StyleBoxTexture" id=11]
 texture = ExtResource( 9 )
 region_rect = Rect2( 0, 0, 19, 37 )
 margin_left = 10.0
@@ -82,7 +82,7 @@ margin_right = 10.0
 margin_top = 10.0
 margin_bottom = 10.0
 
-[sub_resource type="StyleBoxTexture" id=15]
+[sub_resource type="StyleBoxTexture" id=12]
 texture = ExtResource( 8 )
 region_rect = Rect2( 0, 0, 203, 12 )
 margin_left = 5.0
@@ -90,13 +90,13 @@ margin_right = 5.0
 margin_top = 5.0
 margin_bottom = 5.0
 
-[sub_resource type="DynamicFont" id=10]
+[sub_resource type="DynamicFont" id=13]
 size = 35
 outline_size = 2
 outline_color = Color( 0, 0, 0, 1 )
 font_data = ExtResource( 7 )
 
-[sub_resource type="StyleBoxTexture" id=11]
+[sub_resource type="StyleBoxTexture" id=14]
 texture = ExtResource( 6 )
 region_rect = Rect2( 0, 0, 1024, 666 )
 
@@ -235,9 +235,9 @@ HSlider/icons/grabber = null
 HSlider/icons/grabber_disabled = null
 HSlider/icons/grabber_highlight = null
 HSlider/icons/tick = null
-HSlider/styles/grabber_area = SubResource( 13 )
-HSlider/styles/grabber_area_highlight = SubResource( 14 )
-HSlider/styles/slider = SubResource( 15 )
+HSlider/styles/grabber_area = SubResource( 10 )
+HSlider/styles/grabber_area_highlight = SubResource( 11 )
+HSlider/styles/slider = SubResource( 12 )
 HSplitContainer/constants/autohide = 1
 HSplitContainer/constants/separation = 12
 HSplitContainer/icons/grabber = null
@@ -264,7 +264,7 @@ Label/constants/line_spacing = 3
 Label/constants/shadow_as_outline = 0
 Label/constants/shadow_offset_x = 1
 Label/constants/shadow_offset_y = 1
-Label/fonts/font = SubResource( 10 )
+Label/fonts/font = SubResource( 13 )
 Label/styles/normal = null
 LineEdit/colors/clear_button_color = Color( 0, 0, 0, 1 )
 LineEdit/colors/clear_button_color_pressed = Color( 0, 0, 0, 1 )
@@ -313,7 +313,7 @@ OptionButton/styles/focus = null
 OptionButton/styles/hover = null
 OptionButton/styles/normal = null
 OptionButton/styles/pressed = null
-Panel/styles/panel = SubResource( 11 )
+Panel/styles/panel = SubResource( 14 )
 PanelContainer/styles/panel = null
 PopupDialog/styles/panel = null
 PopupMenu/colors/font_color = Color( 0, 0, 0, 1 )

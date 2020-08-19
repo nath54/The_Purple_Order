@@ -263,7 +263,7 @@ public class Equipment : Node
     public string player_facial=null;
     public string player_accessory=null;
     public string player_weapon=null;
-    public Godot.Color cl_hairs = new Godot.Color(0,0,1);
+    public Godot.Color cl_hairs = new Godot.Color(0.42F,0.26F,0.15F);
 
     // Called when the node enters the scene tree for the first time.
     public override void _Ready()

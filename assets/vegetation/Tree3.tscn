@@ -17,7 +17,7 @@ mode = 1
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
 position = Vector2( 0, -36 )
-polygon = PoolVector2Array( 1.20667, 45.4203, 10.5711, 39.8016, 4.57787, 23.6948, 1.20667, 4.59138, -1.29764, -5.25162, -10.8328, 5.87276, -8.15775, 24.0694, -9.65605, 41.6745 )
+polygon = PoolVector2Array( 1.20667, 45.4203, 10.5711, 39.8016, 5.32681, 30.1032, -5.53591, 27.4812, -9.65605, 41.6745 )
 
 [node name="Sprite2" type="Sprite" parent="."]
 position = Vector2( 0.775787, -3.0015 )

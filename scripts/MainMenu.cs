@@ -62,7 +62,7 @@ public class MainMenu : Control
     }
 
     public void _on_Bt_newgame_pressed(){
-        GetTree().ChangeScene("res://maps/Island1.tscn");
+        GetTree().ChangeScene("res://menu/PersoCreation.tscn");
     }
 
     public void _on_Bt_load_pressed(){

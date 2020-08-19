@@ -10,49 +10,49 @@
 [ext_resource path="res://fonts/f1.ttf" type="DynamicFontData" id=8]
 [ext_resource path="res://scripts/PersoCreation.cs" type="Script" id=9]
 
-[sub_resource type="DynamicFont" id=2]
+[sub_resource type="DynamicFont" id=1]
 size = 60
+outline_size = 2
+outline_color = Color( 0, 0, 0, 1 )
+font_data = ExtResource( 8 )
+
+[sub_resource type="DynamicFont" id=2]
+size = 50
 outline_size = 2
 outline_color = Color( 0, 0, 0, 1 )
 font_data = ExtResource( 8 )
 
 [sub_resource type="DynamicFont" id=3]
-size = 50
+size = 60
 outline_size = 2
 outline_color = Color( 0, 0, 0, 1 )
 font_data = ExtResource( 8 )
 
 [sub_resource type="DynamicFont" id=4]
-size = 60
-outline_size = 2
-outline_color = Color( 0, 0, 0, 1 )
-font_data = ExtResource( 8 )
-
-[sub_resource type="DynamicFont" id=5]
 size = 50
 outline_size = 2
 outline_color = Color( 0, 0, 0, 1 )
 font_data = ExtResource( 8 )
 
-[sub_resource type="DynamicFont" id=6]
+[sub_resource type="DynamicFont" id=5]
 size = 60
 outline_size = 2
 outline_color = Color( 0, 0, 0, 1 )
 font_data = ExtResource( 8 )
 
-[sub_resource type="DynamicFont" id=10]
+[sub_resource type="DynamicFont" id=6]
 size = 40
 outline_size = 2
 outline_color = Color( 0, 0, 0, 1 )
 font_data = ExtResource( 8 )
 
-[sub_resource type="DynamicFont" id=8]
+[sub_resource type="DynamicFont" id=7]
 size = 60
 outline_size = 2
 outline_color = Color( 0, 0, 0, 1 )
 font_data = ExtResource( 8 )
 
-[sub_resource type="DynamicFont" id=9]
+[sub_resource type="DynamicFont" id=8]
 size = 50
 outline_size = 2
 outline_color = Color( 0, 0, 0, 1 )
@@ -144,7 +144,7 @@ margin_top = -4.25203
 margin_right = 332.612
 margin_bottom = 58.748
 rect_scale = Vector2( 0.5, 0.5 )
-custom_fonts/font = SubResource( 2 )
+custom_fonts/font = SubResource( 1 )
 custom_colors/font_color = Color( 0.960784, 0.890196, 0.890196, 1 )
 text = "Gender :"
 __meta__ = {
@@ -161,7 +161,7 @@ margin_top = -21.0
 margin_right = 321.0
 margin_bottom = 59.0
 rect_scale = Vector2( 0.5, 0.5 )
-custom_fonts/font = SubResource( 3 )
+custom_fonts/font = SubResource( 2 )
 custom_colors/font_color = Color( 0.784314, 0.764706, 0.764706, 1 )
 text = "male"
 align = 1
@@ -201,7 +201,7 @@ margin_top = -4.25203
 margin_right = 332.612
 margin_bottom = 58.748
 rect_scale = Vector2( 0.5, 0.5 )
-custom_fonts/font = SubResource( 4 )
+custom_fonts/font = SubResource( 3 )
 custom_colors/font_color = Color( 0.960784, 0.890196, 0.890196, 1 )
 text = "Skin :"
 __meta__ = {
@@ -218,7 +218,7 @@ margin_top = -21.0
 margin_right = 321.0
 margin_bottom = 59.0
 rect_scale = Vector2( 0.5, 0.5 )
-custom_fonts/font = SubResource( 5 )
+custom_fonts/font = SubResource( 4 )
 custom_colors/font_color = Color( 0.784314, 0.764706, 0.764706, 1 )
 text = "white"
 align = 1
@@ -258,7 +258,7 @@ margin_top = -4.25203
 margin_right = 332.612
 margin_bottom = 58.748
 rect_scale = Vector2( 0.5, 0.5 )
-custom_fonts/font = SubResource( 6 )
+custom_fonts/font = SubResource( 5 )
 custom_colors/font_color = Color( 0.960784, 0.890196, 0.890196, 1 )
 text = "Hairs :"
 __meta__ = {
@@ -275,7 +275,7 @@ margin_top = -27.0
 margin_right = 321.0
 margin_bottom = 74.0
 rect_scale = Vector2( 0.5, 0.5 )
-custom_fonts/font = SubResource( 10 )
+custom_fonts/font = SubResource( 6 )
 custom_colors/font_color = Color( 0.784314, 0.764706, 0.764706, 1 )
 text = "bangs"
 align = 1
@@ -321,7 +321,7 @@ margin_top = 10.0
 margin_right = 409.0
 margin_bottom = 105.0
 rect_scale = Vector2( 0.5, 0.5 )
-custom_fonts/font = SubResource( 6 )
+custom_fonts/font = SubResource( 5 )
 custom_colors/font_color = Color( 0.960784, 0.890196, 0.890196, 1 )
 text = "Hairs Color :"
 __meta__ = {
@@ -334,9 +334,9 @@ anchor_top = 1.65
 anchor_right = 14.45
 anchor_bottom = 1.65
 margin_left = 8.0
-margin_top = 331.0
+margin_top = 327.0
 margin_right = 344.0
-margin_bottom = 420.0
+margin_bottom = 416.0
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -347,7 +347,7 @@ margin_top = -4.25203
 margin_right = 332.612
 margin_bottom = 58.748
 rect_scale = Vector2( 0.5, 0.5 )
-custom_fonts/font = SubResource( 8 )
+custom_fonts/font = SubResource( 7 )
 custom_colors/font_color = Color( 0.960784, 0.890196, 0.890196, 1 )
 text = "Eyes :"
 __meta__ = {
@@ -364,7 +364,7 @@ margin_top = -21.0
 margin_right = 321.0
 margin_bottom = 59.0
 rect_scale = Vector2( 0.5, 0.5 )
-custom_fonts/font = SubResource( 9 )
+custom_fonts/font = SubResource( 8 )
 custom_colors/font_color = Color( 0.784314, 0.764706, 0.764706, 1 )
 text = "white"
 align = 1
@@ -417,10 +417,10 @@ __meta__ = {
 }
 
 [node name="ColorPicker" type="ColorPicker" parent="Parameters/ColorPicker"]
-margin_left = -22.842
-margin_top = -179.281
-margin_right = 407.158
-margin_bottom = 304.719
+margin_left = -10.842
+margin_top = -167.281
+margin_right = 419.158
+margin_bottom = 316.719
 edit_alpha = false
 presets_enabled = false
 presets_visible = false
@@ -443,5 +443,8 @@ text = "ok"
 [connection signal="pressed" from="Parameters/C_hairs/bt_normal/LeftButton" to="." method="on_bt_hair_left"]
 [connection signal="pressed" from="Parameters/C_hairs/bt_normal/RightButton" to="." method="on_bt_hair_right"]
 [connection signal="pressed" from="Parameters/C_hairs/Bt_cl" to="." method="on_cl_rect_pressed"]
+[connection signal="pressed" from="Parameters/C_eyes/bt_normal/LeftButton" to="." method="on_bt_eyes_left"]
+[connection signal="pressed" from="Parameters/C_eyes/bt_normal/RightButton" to="." method="on_bt_eyes_right"]
+[connection signal="pressed" from="Parameters/Bt_next" to="." method="_on_Bt_next_pressed"]
 [connection signal="color_changed" from="Parameters/ColorPicker/ColorPicker" to="." method="on_cl_pick_change"]
 [connection signal="pressed" from="Parameters/ColorPicker/Bt_ok" to="." method="on_cl_pick_press"]

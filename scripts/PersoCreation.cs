@@ -214,6 +214,40 @@ public class PersoCreation : Control
         globale.equipment.act_player_equipement(player);
     }
 
+    public void on_bt_eyes_left(){
+        if(globale.equipment.is_player_female){
+            int idb=Array.IndexOf(globale.equipment.eyes_female.Keys.ToArray(),globale.equipment.player_eye);
+            idb--;
+            if(idb<0){ idb=globale.equipment.eyes_female.Keys.Count-1; }
+            globale.equipment.player_eye=globale.equipment.eyes_female.Keys.ToArray()[idb];
+        }
+        else{
+            int idb=Array.IndexOf(globale.equipment.eyes_male.Keys.ToArray(),globale.equipment.player_eye);
+            idb--;
+            if(idb<0){ idb=globale.equipment.eyes_male.Keys.Count-1; }
+            globale.equipment.player_eye=globale.equipment.eyes_male.Keys.ToArray()[idb];
+        }
+        act_bts();
+        globale.equipment.act_player_equipement(player);
+    }
+
+    public void on_bt_eyes_right(){
+        if(globale.equipment.is_player_female){
+            int idb=Array.IndexOf(globale.equipment.eyes_female.Keys.ToArray(),globale.equipment.player_eye);
+            idb++;
+            if(idb>globale.equipment.eyes_female.Keys.Count-1){ idb=0; }
+            globale.equipment.player_eye=globale.equipment.eyes_female.Keys.ToArray()[idb];
+        }
+        else{
+            int idb=Array.IndexOf(globale.equipment.eyes_male.Keys.ToArray(),globale.equipment.player_eye);
+            idb++;
+            if(idb>globale.equipment.eyes_male.Keys.Count-1){ idb=0; }
+            globale.equipment.player_eye=globale.equipment.eyes_male.Keys.ToArray()[idb];
+        }
+        act_bts();
+        globale.equipment.act_player_equipement(player);
+    }
+
     public void act_bts(){
         //Get labels
         Label l_gender=(Label)GetNode("Parameters/C_Gender/bt_normal/Label");
@@ -221,17 +255,23 @@ public class PersoCreation : Control
         Label l_hairs=(Label)GetNode("Parameters/C_hairs/bt_normal/Label");
         Label l_eyes = (Label)GetNode("Parameters/C_eyes/bt_normal/Label");
         ColorRect clr = (ColorRect)GetNode("Parameters/C_hairs/Bt_cl/ColorRect");
+        ColorPicker clpick = (ColorPicker)GetNode("Parameters/ColorPicker/ColorPicker");
         Button btclr = (Button)GetNode("Parameters/C_hairs/Bt_cl");
         //Get values
         if(globale.equipment.is_player_female){ l_gender.Text="female"; }
         else{ l_gender.Text="male"; }
         l_body.Text=globale.equipment.player_body;
         l_hairs.Text=globale.equipment.player_hair;
+        l_eyes.Text=globale.equipment.player_eye;
         clr.Color=globale.equipment.cl_hairs;
+        clpick.Color=clr.Color;
         if(globale.equipment.is_player_female){ btclr.Disabled=!(globale.equipment.hairs_female_recolor[globale.equipment.player_hair]); }
         else{ btclr.Disabled=!(globale.equipment.hairs_male_recolor[globale.equipment.player_hair]); }
         
     }
 
+    public void _on_Bt_next_pressed(){
+        GetTree().ChangeScene("res://maps/Island1.tscn");
+    }
 
 }
