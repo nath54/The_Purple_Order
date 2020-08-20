@@ -9,6 +9,6 @@ For the moment I've done :
  - I worked on the player and customization of the player  
  - When we start a new game, we access to the menu of player creation, and we can create our own customized character
 
-Thanks a lot to https://github.com/sanderfrenken/Universal-LPC-Spritesheet-Character-Generator/tree/master/spritesheets , they have done a formidable work, and I used it for my game graphics.
+Thanks a lot to [Universal-LPC-Spritesheet-Character-Generator](https://github.com/sanderfrenken/Universal-LPC-Spritesheet-Character-Generator/tree/master/spritesheets) and [opengameart/lpc-game-assets](https://opengameart.org/content/lpc-game-assets), they have done a formidable work, and I used it for my game graphics.
 
 Credits file : [credits.txt](CREDITS.TXT)
