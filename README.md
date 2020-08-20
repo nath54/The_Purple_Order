@@ -11,4 +11,4 @@ For the moment I've done :
 
 Thanks a lot to https://github.com/sanderfrenken/Universal-LPC-Spritesheet-Character-Generator/tree/master/spritesheets , they have done a formidable work, and I used it for my game graphics.
 
-Credits file : (credits.txt)[credits.txt]
+Credits file : [credits.txt](CREDITS.TXT)
