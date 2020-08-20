@@ -1,4 +1,4 @@
-[gd_scene load_steps=18 format=2]
+[gd_scene load_steps=19 format=2]
 
 [ext_resource path="res://res/Panel_style_colored.tres" type="StyleBox" id=1]
 [ext_resource path="res://player/Player_Viewer.tscn" type="PackedScene" id=2]
@@ -9,6 +9,7 @@
 [ext_resource path="res://controls/RightButton.tscn" type="PackedScene" id=7]
 [ext_resource path="res://fonts/f1.ttf" type="DynamicFontData" id=8]
 [ext_resource path="res://scripts/PersoCreation.cs" type="Script" id=9]
+[ext_resource path="res://controls/MobileControls.tscn" type="PackedScene" id=10]
 
 [sub_resource type="DynamicFont" id=1]
 size = 60
@@ -107,6 +108,16 @@ autowrap = true
 __meta__ = {
 "_edit_use_anchors_": false
 }
+
+[node name="MobileControls" parent="ViewPort" instance=ExtResource( 10 )]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -327.2
+margin_top = -251.599
+margin_right = 136.8
+margin_bottom = 208.401
 
 [node name="Parameters" type="Control" parent="."]
 margin_right = 40.0
@@ -417,10 +428,10 @@ __meta__ = {
 }
 
 [node name="ColorPicker" type="ColorPicker" parent="Parameters/ColorPicker"]
-margin_left = -10.842
-margin_top = -167.281
-margin_right = 419.158
-margin_bottom = 316.719
+margin_left = -46.0101
+margin_top = -191.502
+margin_right = 373.99
+margin_bottom = 292.498
 edit_alpha = false
 presets_enabled = false
 presets_visible = false

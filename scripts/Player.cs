@@ -41,8 +41,6 @@ public class Player : KinematicBody2D
     };
 
     //POUR MOBILE
-    public Joystick_Button joystick;
-	public Sprite global_joystick;
     public double[] joystick_val={0.0,0.0};
 
     //AUTRE
@@ -59,11 +57,8 @@ public class Player : KinematicBody2D
         set_anim("move_left");
         set_anim_frame(0);
         //MOBILE
-        joystick = (Joystick_Button)GetNode("Camera2D/joystick/Joystick_Button");
-		global_joystick = (Sprite)GetNode("Camera2D/joystick");
-        if(!globale.is_mobile()){
-            joystick.Visible=false;
-            global_joystick.Visible=false;
+        if(!globale.is_mobile() && globale.mobileControls!=null){
+            globale.mobileControls.Visible=false;
         }
         //
         SetProcessInput(true);
@@ -76,27 +71,20 @@ public class Player : KinematicBody2D
         float vit = _walkSpeed;
         if(is_running){ vit=_runSpeed; }
         vit*=delta;
-        if(globale.is_mobile()){
-            if(joystick.ongoing_drag!=-1){
-                Vector2 joymov=joystick.get_value();
-                velocity.x=joymov.x*vit;
-                velocity.y=joymov.y*vit;
-            }
-		}
-        else{
-            if(Input.IsActionPressed("move_up")){
-                velocity.y-=vit;
-            }
-            if(Input.IsActionPressed("move_down")){
-                velocity.y+=vit;
-            }
-            if(Input.IsActionPressed("move_left")){
-                velocity.x-=vit;
-            }
-            if(Input.IsActionPressed("move_right")){
-                velocity.x+=vit;
-            }
+        
+        if(Input.IsActionPressed("move_up")){
+            velocity.y-=vit;
         }
+        if(Input.IsActionPressed("move_down")){
+            velocity.y+=vit;
+        }
+        if(Input.IsActionPressed("move_left")){
+            velocity.x-=vit;
+        }
+        if(Input.IsActionPressed("move_right")){
+            velocity.x+=vit;
+        }
+        
         //
         //
         MoveAndCollide(velocity);
@@ -193,9 +181,4 @@ public class Player : KinematicBody2D
         }
     }
 
-//  // Called every frame. 'delta' is the elapsed time since the previous frame.
-//  public override void _Process(float delta)
-//  {
-//      
-//  }
 }

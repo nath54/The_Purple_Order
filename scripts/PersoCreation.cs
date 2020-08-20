@@ -46,17 +46,21 @@ public class PersoCreation : Control
         player_moving=true;
         player.SetProcessInput(true);
         player.SetPhysicsProcess(true);
-        Label l = (Label)GetNode("ViewPort/Inf_exit");
-        l.Visible=true;
+        if(!globale.is_mobile()){
+            Label l = (Label)GetNode("ViewPort/Inf_exit");
+            l.Visible=true;
+        }
     }
     public void mouse_exited_viewport(){
-        player_moving=false;
-        player.stop_anim();
-        player.set_anim_frame(0);
-        player.SetProcessInput(false);
-        player.SetPhysicsProcess(false);
-        Label l = (Label)GetNode("ViewPort/Inf_exit");
-        l.Visible=false;
+        if(!globale.is_mobile()){
+            player_moving=false;
+            player.stop_anim();
+            player.set_anim_frame(0);
+            player.SetProcessInput(false);
+            player.SetPhysicsProcess(false);
+            Label l = (Label)GetNode("ViewPort/Inf_exit");
+            l.Visible=false;
+        }
     }
 
     public override void _Input(InputEvent @event){
@@ -271,7 +275,7 @@ public class PersoCreation : Control
     }
 
     public void _on_Bt_next_pressed(){
-        GetTree().ChangeScene("res://maps/Island1.tscn");
+        GetTree().ChangeScene("res://maps/Island_begining.tscn");
     }
 
 }
