@@ -12,3 +12,9 @@ For the moment I've done :
 Thanks a lot to [Universal-LPC-Spritesheet-Character-Generator](https://github.com/sanderfrenken/Universal-LPC-Spritesheet-Character-Generator/tree/master/spritesheets) and [opengameart/lpc-game-assets](https://opengameart.org/content/lpc-game-assets), they have done a formidable work, and I used it for my game graphics.
 
 Credits file : [credits.txt](CREDITS.TXT)
+
+## Screenshots : 
+
+![](Screenshot_0.png)
+![](Screenshot_1.png)
+![](Screenshot_2.png)
