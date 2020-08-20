@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/Male_plate_bronze(Johannes Sjîlund).png-a2607873ab7e99f207fd60dd6a5ae930.stex"
+path="res://.import/ui_big_pieces.png-132d48b47b291456e9dd1c27fcfe9fc4.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://imgs/spritesheets/torso/plate/Male_plate_bronze(Johannes Sjîlund).png"
-dest_files=[ "res://.import/Male_plate_bronze(Johannes Sjîlund).png-a2607873ab7e99f207fd60dd6a5ae930.stex" ]
+source_file="res://imgs/ui/ui_big_pieces.png"
+dest_files=[ "res://.import/ui_big_pieces.png-132d48b47b291456e9dd1c27fcfe9fc4.stex" ]
 
 [params]
 

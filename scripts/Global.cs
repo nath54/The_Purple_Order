@@ -26,6 +26,7 @@ public class Global : Node
     public bool is_mobile(){
         string on = OS.GetName();
         List<string> mb = new List<string>(){"Android","iOS"};
+        return true; //debug on pc
         return mb.Contains(on);
     }
 

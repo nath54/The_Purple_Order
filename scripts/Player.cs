@@ -41,7 +41,6 @@ public class Player : KinematicBody2D
     };
 
     //POUR MOBILE
-    public Control MobileControls;
     public Joystick_Button joystick;
 	public Sprite global_joystick;
     public double[] joystick_val={0.0,0.0};
@@ -60,10 +59,15 @@ public class Player : KinematicBody2D
         set_anim("move_left");
         set_anim_frame(0);
         //MOBILE
-        joystick = (Joystick_Button)GetNode("MobileControls/joystick/Joystick_Button");
-		global_joystick = (Sprite)GetNode("MobileControls/joystick");
-        MobileControls = (Control)GetNode("MobileControls");
-
+        joystick = (Joystick_Button)GetNode("Camera2D/joystick/Joystick_Button");
+		global_joystick = (Sprite)GetNode("Camera2D/joystick");
+        if(!globale.is_mobile()){
+            joystick.Visible=false;
+            global_joystick.Visible=false;
+        }
+        //
+        SetProcessInput(true);
+        SetPhysicsProcess(true);
     }
 
     public override void _PhysicsProcess(float delta){
@@ -72,17 +76,26 @@ public class Player : KinematicBody2D
         float vit = _walkSpeed;
         if(is_running){ vit=_runSpeed; }
         vit*=delta;
-        if(Input.IsActionPressed("move_up")){
-            velocity.y-=vit;
-        }
-        if(Input.IsActionPressed("move_down")){
-            velocity.y+=vit;
-        }
-        if(Input.IsActionPressed("move_left")){
-            velocity.x-=vit;
-        }
-        if(Input.IsActionPressed("move_right")){
-            velocity.x+=vit;
+        if(globale.is_mobile()){
+            if(joystick.ongoing_drag!=-1){
+                Vector2 joymov=joystick.get_value();
+                velocity.x=joymov.x*vit;
+                velocity.y=joymov.y*vit;
+            }
+		}
+        else{
+            if(Input.IsActionPressed("move_up")){
+                velocity.y-=vit;
+            }
+            if(Input.IsActionPressed("move_down")){
+                velocity.y+=vit;
+            }
+            if(Input.IsActionPressed("move_left")){
+                velocity.x-=vit;
+            }
+            if(Input.IsActionPressed("move_right")){
+                velocity.x+=vit;
+            }
         }
         //
         //
