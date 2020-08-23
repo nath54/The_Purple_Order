@@ -15,8 +15,6 @@ Credits file : [credits.txt](CREDITS.TXT)
 
 ## Screenshots : 
 
-![](icon.png)
-
 ![](Screenshot_0.png)
 ![](Screenshot_1.png)
 ![](Screenshot_2.png)
