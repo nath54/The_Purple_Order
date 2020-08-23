@@ -1,4 +1,4 @@
-# The_Purple_Order
+# The_Purple_Order ![](icon.png)
 
 ## *( Warning ! )* This game is in development
 
