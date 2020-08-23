@@ -1,4 +1,4 @@
-# The_Purple_Order ![](icon.png)
+# The_Purple_Order
 
 ## *( Warning ! )* This game is in development
 
@@ -14,6 +14,8 @@ Thanks a lot to [Universal-LPC-Spritesheet-Character-Generator](https://github.c
 Credits file : [credits.txt](CREDITS.TXT)
 
 ## Screenshots : 
+
+![](icon.png)
 
 ![](Screenshot_0.png)
 ![](Screenshot_1.png)
